@@ -109,3 +109,26 @@ body {
 .event:hover::after {
     background-color: var(--color-primary);
 }
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 31px; /* Mueve la línea al centro en móviles */
+    }
+
+    .event {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .event::after {
+        left: 18px;
+    }
+
+    .left::after, .right::after {
+        left: 18px;
+    }
+
+    .right {
+        left: 0;
+    }
+}
