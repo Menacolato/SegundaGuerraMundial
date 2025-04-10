@@ -92,3 +92,20 @@ body {
     background-color: var(--color-card);
     box-shadow: var(--shadow);
 }
+.content {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación para los puntos de la línea */
+.event::after {
+    transition: background-color 0.3s ease;
+}
+
+.event:hover::after {
+    background-color: var(--color-primary);
+}
