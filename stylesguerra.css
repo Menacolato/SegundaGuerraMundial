@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: var(--color-primary);
 }
 
 .timeline {
@@ -15,7 +15,7 @@ body {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #333;
+    background-color: #736969;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -25,7 +25,7 @@ body {
 .event {
     padding: 10px 40px;
     position: relative;
-    background-color: inherit;
+    background-color: teal;
     width: 50%;
 }
 
@@ -59,7 +59,7 @@ body {
 
 .content {
     padding: 15px;
-    background-color: white;
+    background-color: var(--color-primary);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -71,7 +71,7 @@ h2 {
 root {
     --color-primary: #8B0000; /* Rojo oscuro (tema guerra) */
     --color-secondary: #333;
-    --color-bg: #f5f5f5;
+    --color-bg: #8b0000;
     --color-card: white;
     --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .timeline::after {
-    background-color: var(--color-secondary);
+    background-color:royalblue;
 }
 
 .event::after {
@@ -89,8 +89,8 @@ body {
 }
 
 .content {
-    background-color: var(--color-card);
-    box-shadow: var(--shadow);
+    background-color: black;
+    box-shadow: coral;
 }
 .content {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -131,4 +131,18 @@ body {
     .right {
         left: 0;
     }
+}
+.timeline-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Opcional: Efecto hover en imágenes */
+.timeline-img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
